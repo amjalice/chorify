@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6ad7069.css",
+    "main.js": "/static/js/main.1f1fc839.js",
+    "static/media/Recess-pana.svg": "/static/media/Recess-pana.e33aee9e7d7928e7962ef8ca162b1120.svg",
+    "index.html": "/index.html",
+    "main.e6ad7069.css.map": "/static/css/main.e6ad7069.css.map",
+    "main.1f1fc839.js.map": "/static/js/main.1f1fc839.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6ad7069.css",
+    "static/js/main.1f1fc839.js"
+  ]
+}

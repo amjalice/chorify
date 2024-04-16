@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari */
+  outline: none;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 420px) {
+  * {
+    -webkit-appearance: none;
+  }
+  main {
+    width: 100vw;
+  }
+}

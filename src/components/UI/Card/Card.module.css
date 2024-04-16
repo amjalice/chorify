@@ -1,0 +1,16 @@
+.card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  max-height: 600px;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+.reg-submit {
+  background-color: white !important;
+}

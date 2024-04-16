@@ -1,0 +1,1422 @@
+body {
+  background-color: #eafff8;
+}
+.header-links {
+  width: 110%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  margin-top: -2px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.link-btn {
+  width: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: #dceefb;
+  border-bottom: solid 2px #dceefb;
+  -webkit-appearance: none;
+  color: black;
+}
+
+.link-btn:active {
+  color: black;
+  outline: none;
+}
+
+.link-btn:focus {
+  outline: none;
+}
+
+.active {
+  background-color: #b6e0fe;
+  border-bottom: solid 3px #74c0fc;
+  font-weight: 700;
+}
+
+.active:active {
+  color: black;
+}
+
+.tasks-container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 60px;
+  margin-top: 150px;
+  min-height: 80vh;
+}
+
+.new-chore-form {
+  background-color: #c3fae8;
+  padding: 20px;
+  width: 60%;
+  border-radius: 6px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 0 auto 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.member-task-filter {
+  margin-top: 6px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.new-chore-form label,
+.new-chore-form input {
+  display: block;
+}
+
+.new-chore-form label,
+.member-task-filter label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+}
+
+.new-chore-form input,
+.new-chore-form select,
+.member-task-filter input,
+.member-task-filter select {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.7rem;
+  width: 100%;
+}
+
+.member-task-filter select,
+.member-task-filter input {
+  width: 125px;
+  padding: 0.15rem 0.15rem;
+  margin-bottom: 0;
+}
+
+.member-task-filter input {
+  width: 125px;
+}
+
+.member-task-filter select:focus,
+.member-task-filter input:focus {
+  outline: none;
+  border-color: #15cd95;
+}
+
+.member-task-filter label {
+  margin-bottom: 0.2rem;
+  margin-right: 3px;
+}
+
+.member-task-filter .flex-item:first-child {
+  margin-right: 10px;
+}
+.member-task-filter .flex-item:last-child {
+  margin-right: 5px;
+}
+
+.new-chore-form input:focus,
+.new-chore-form select:focus {
+  outline: none;
+  border-color: #15cd95;
+  background: #e6fcf5;
+}
+
+.new-chore-form.invalid input {
+  border-color: red;
+  background: #fbdada;
+}
+
+.add-chore-btn {
+  width: 70%;
+  font: inherit;
+  border: 1px solid #087f5b;
+  background: #38d9a9;
+  color: white;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  margin: 20px auto 0 auto;
+}
+
+.add-chore-btn:hover,
+.add-chore-btn:active {
+  background: #20c997;
+  border-color: #087f5b;
+}
+
+.add-chore-btn:focus {
+  outline: none;
+}
+
+.add-chore-btn:disabled,
+.add-chore-btn:focus:disabled,
+.add-chore-btn:hover:disabled,
+.add-chore-btn:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.assign-btn {
+  border: 1px solid #c2255c;
+  border-radius: 6px;
+  background: #f783ac;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  font-size: 18px;
+}
+
+.assign-btn:hover,
+.assign-btn:active {
+  background: #f783ac;
+  border-color: #c2255c;
+}
+
+.assign-btn.assign-active:hover,
+.assign-btn.assign-active:active {
+  background: #d6336c;
+  border-color: #c2255c;
+}
+
+.assign-active {
+  background: #d6336c;
+  border-color: #c2255c;
+}
+
+.assign-btn:focus {
+  outline: none;
+}
+
+.assign-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.new-chore-btn {
+  width: 45%;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  background: #9775fa;
+  background: #38d9a9;
+  background: #00b37d;
+  color: white;
+  padding: 0.75rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 10px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.new-chore-btn:hover,
+.new-chore-btn:active {
+  background: #20c997;
+  border-color: #12b886;
+  border-color: #fff;
+}
+
+.new-chore-btn:focus {
+  outline: none;
+}
+
+.plus {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-right: 8px;
+}
+
+.rewards-plus {
+  fill: #da77f2;
+  width: 100%;
+  height: 100%;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: auto;
+  color: #087f5b;
+}
+
+.tasks-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c3fae8;
+  text-align: center;
+  border-radius: 6px;
+  margin: 20px;
+  padding: 1px 0 20px 0;
+  flex-grow: 1;
+}
+
+.tasks-display h4 {
+  color: white;
+  text-align: left;
+}
+
+.tasks-display p {
+  font: 22px;
+  color: #464646;
+  font-weight: bold;
+  padding-top: 15px;
+  user-select: none;
+}
+
+mark {
+  background-color: white;
+  padding: 5px 8px;
+  border-radius: 0 5px 5px 0;
+  color: #087f5b;
+  user-select: none;
+}
+
+.to-do-display {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.completed-display {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  display: grid;
+  grid-template-columns: 0.15fr 2fr 1fr;
+  width: 95%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #e6fcf5;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.form-control:hover {
+  cursor: pointer;
+}
+
+.chore-name {
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+:root {
+  --form-control-disabled: #959495;
+  --form-control-color: #087f5b;
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+.chore-details-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  color: #c2255c;
+}
+
+.new-member-input {
+  background-color: #e6fcf5;
+  padding: 0px 30px;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.new-member-actions {
+  background-color: #ffdeeb;
+  padding: 20px 10px;
+  width: 80%;
+  border-radius: 6px;
+}
+
+.hide-input {
+  display: none;
+}
+
+.new-member-input label,
+.new-member-input input {
+  display: block;
+}
+
+.new-member-input label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+}
+
+.new-member-input input {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.new-member-input input:focus {
+  outline: none;
+  border-color: #15cd95;
+  background: white;
+}
+
+.new-member-input .invalid {
+  border-color: red;
+  background: #fbdada;
+}
+
+.new-member-input .invalid:focus {
+  border-color: red;
+  background: #fbdada;
+}
+
+.member-cancel-btn {
+  cursor: pointer;
+  color: #15cd95;
+  position: relative;
+  left: 92%;
+  font-size: 18px;
+}
+
+.modal-cancel {
+  padding-top: 20px;
+}
+
+.members-list-name {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  background-color: #ffdeeb;
+  color: #343a40;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 6px;
+  height: 2rem;
+}
+
+.member-name {
+  margin-top: 6px;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.add-member-form {
+  background-color: #e6fcf5;
+  padding: 20px 10px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.add-member-form h4 {
+  margin: 0 auto;
+  color: #38d9a9;
+  font-size: 20px;
+}
+
+.add-member-form .back-btn {
+  background: none;
+  border-color: #868e96;
+  color: #868e96;
+  margin-right: 20px;
+  padding: 0.75rem 3rem !important;
+  font-size: 16px;
+}
+
+.add-member-form .submit-add-member-btn {
+  padding: 0.75rem 3rem !important;
+  font-size: 16px;
+}
+
+.add-member-form .back-btn:hover,
+.add-member-form .back-btn:active {
+  background: none;
+  border-color: #868e96;
+  color: #868e96;
+}
+
+.add-member-form .back-btn:focus {
+  outline: none;
+}
+
+.some-btn {
+  width: 100%;
+  background-color: #e6fcf5;
+  padding: 20px 0;
+}
+
+.remove-member-btn {
+  font: inherit;
+  border: 1px solid #a61e4d;
+  background: #c2255c;
+  color: white;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.remove-member-btn:hover,
+.remove-member-btn:active {
+  background-color: #d6336c;
+}
+
+.remove-member-btn:focus {
+  outline: none;
+}
+
+.admin-member-btn {
+  font: inherit;
+  border: 1px solid #6741d9;
+  background: #845ef7;
+  color: white;
+  padding: 0 1.4rem;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.admin-member-btn:focus {
+  outline: none;
+}
+
+.admin {
+  background-color: #e5dbff;
+}
+
+.trash {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.deleted-chores-msg {
+  text-align: left;
+  margin-left: 35px;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.memberpoints-display {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pointsbank-display h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #20c997;
+  user-select: none;
+}
+
+.points-member-container {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ebfbee;
+  border: 1px solid #69db7c;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #464646;
+  user-select: none;
+}
+
+.member-name {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.rewards-display {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rewards-header {
+  display: flex;
+  width: 62%;
+  justify-content: space-between;
+}
+
+.rewards-header h2 {
+  color: #20c997;
+  user-select: none;
+}
+
+.add-reward-btn {
+  border: none;
+  padding: 0px;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-rewards-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.claimed-rewards-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewards-item {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe8cc;
+  background-color: #ffdeeb;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.rewards-container {
+  background-color: #fff5f5;
+  padding-bottom: 1px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  border-top: none;
+}
+
+.rewards-item:first-child {
+  margin-top: 10px;
+}
+
+.claimed-item {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffdeeb;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.claimed-item:first-child {
+  margin-top: 10px;
+}
+
+.reward-name {
+  padding-left: 10px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.reward-points {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.claimed-by {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.rewards-tab button {
+  font-size: 16px;
+  color: black;
+  margin-top: -2px;
+}
+
+.rewards-tab {
+  margin-bottom: 5px;
+  margin-top: -2px;
+}
+
+.open-rewards-tab {
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: #f8f0fc;
+  border-bottom: solid 2px #f8f0fc;
+  border-top-left-radius: 10px;
+}
+
+.open-rewards-tab:focus,
+.open-rewards-tab:active {
+  outline: none;
+}
+
+.claimed-rewards-tab:focus,
+.claimed-rewards-tab:active {
+  outline: none;
+}
+
+.claimed-rewards-tab {
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: #f8f0fc;
+  border-bottom: 2px solid #f8f0fc;
+  border-top-right-radius: 10px;
+}
+
+.active-tab {
+  background-color: #f3d9fa;
+  border-bottom: 3px solid #da77f2;
+  font-weight: 700;
+}
+
+.points-claim-container {
+  width: 200px;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.points-claim-container p {
+  display: inline;
+}
+
+.claim-reward-btn {
+  border: 1px solid black;
+  color: black;
+  border-radius: 6px;
+  background-color: #ffd43b;
+  background-color: #ffec99;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+  height: 36px;
+  padding: 5px 10px;
+}
+
+.claim-reward-btn:hover,
+.claim-reward-btn:active {
+  background-color: #ffd43b;
+  background-color: #ffe066;
+}
+
+.link-btn {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-btn-icon {
+  margin-right: 10px;
+  margin-bottom: 1px;
+  height: 20px;
+}
+
+.addRewardModal {
+  position: fixed;
+  top: 15vh;
+  left: 30%;
+  width: 40%;
+  z-index: 100;
+  padding-bottom: 50px;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+.claimRewardModal {
+  position: fixed;
+  top: 15vh;
+  left: 30%;
+  width: 40%;
+  z-index: 100;
+  padding-bottom: 50px;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+.add-reward-form {
+  background-color: white;
+  padding: 20px 0px;
+  padding-bottom: 0;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.add-reward-form h2 {
+  user-select: none;
+}
+
+.new-reward-input {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.new-reward-input label,
+.new-reward-input input {
+  display: block;
+}
+
+.claimRewardFormWrapper {
+  padding: 0 20px;
+}
+
+.addRewardFormWrapper {
+  padding: 0 20px;
+}
+
+.new-reward-input label,
+.claim-reward-select label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+}
+
+.new-reward-input input,
+.claim-reward-select select {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.7rem;
+  width: 100%;
+}
+
+.new-reward-input input,
+.claim-reward-select select {
+  width: 100%;
+  padding: 0.25rem 0.15rem;
+  margin-bottom: 12px;
+}
+
+.claim-reward-select select {
+  margin-top: 5px;
+}
+
+.new-reward-input input:focus,
+.claim-reward-select select:focus {
+  outline: none;
+  border-color: #15cd95;
+}
+
+.claim-reward-select {
+  padding: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.claim-reward-form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-reward-form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-add-member-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#emojiContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.emoji {
+  font-size: 2em;
+  animation: bounce 2s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.claim-points-req {
+  margin-top: 0;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: #e64980;
+}
+
+.tasks-display p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.add-chore-flex {
+  display: flex;
+  margin: 0 20px;
+}
+
+.winners {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 5px;
+}
+
+.checklist {
+  width: 320px;
+  height: 320px;
+}
+
+.pointsbank-container {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #c3fae8;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.no-rewards-msg,
+.no-claimed-msg {
+  margin-bottom: 20px;
+  font-size: 18px;
+  user-select: none;
+}
+
+.dummy-msg {
+  font-size: 14px;
+}
+
+.logout-btn {
+  padding: 0.5rem 2rem;
+  font-size: 16px;
+  background: #adb5bd;
+  border-color: #868e96;
+}
+
+.logout-btn:hover,
+.logout-btn:active {
+  background: #adb5bd;
+
+  border-color: #868e96;
+}
+
+.logout-btn:focus {
+  outline: none;
+}
+
+.logout-btn:disabled,
+.logout-btn:focus:disabled,
+.logout-btn:hover:disabled,
+.logout-btn:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.new-member-btn {
+  padding: 0.5rem 2rem;
+  font-size: 16px;
+  background: #e64980;
+  border-color: #a61e4d;
+}
+
+.new-member-btn:hover,
+.new-member-btn:active {
+  background: #d6336c;
+
+  border-color: #a61e4d;
+}
+
+.new-member-btn:focus {
+  outline: none;
+}
+
+.new-member-btn:disabled,
+.new-member-btn:focus:disabled,
+.new-member-btn:hover:disabled,
+.new-member-btn:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.reg-container {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: 650px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.reg-container h2 {
+  margin-top: 20px;
+}
+
+.reg-actions {
+  padding: 0;
+  background-color: #e6fcf5;
+}
+
+.reg-submit {
+  background-color: white !important;
+  margin-top: 20px !important;
+  padding: 20px 20px !important;
+  background-color: #c3fae8 !important;
+  border-radius: 6px !important;
+}
+
+.family-note {
+  text-align: left;
+  width: 440px;
+  margin-left: 140px;
+}
+
+.register-container span {
+  margin-bottom: 0px;
+}
+
+.register-container {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.reg-card-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.login-container {
+  background: white;
+  border-radius: 10px;
+  width: 650px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-container h2 {
+  margin-top: 20px;
+}
+
+.login-submit {
+  background-color: white !important;
+  margin-top: 20px !important;
+  padding: 20px 20px !important;
+  background-color: #c3fae8 !important;
+  border-radius: 6px !important;
+}
+
+.login-note {
+  text-align: left;
+  width: 440px;
+  margin-left: 140px;
+}
+
+.login-container span {
+  margin-bottom: 0px;
+}
+
+.login-container {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.login-card-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-comp {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  outline: none;
+}
+
+.hide-header-links {
+  display: none;
+}
+
+.members-list-display {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1380px) {
+  .add-member-form {
+    width: 100%;
+  }
+  .tasks-container {
+    width: 920px;
+  }
+  .winners {
+    width: 320px;
+    height: 320px;
+  }
+  .pointsbank-display h2 {
+    font-size: 30px;
+  }
+  .rewards-header h2 {
+    font-size: 30px;
+  }
+  .tasks-display p {
+    font-size: 22px;
+  }
+  .link-btn {
+    font-size: 17px;
+  }
+  .rewards-tab button {
+    font-size: 16px;
+  }
+  .new-chore-btn {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .member-task-filter label {
+    font-size: 18px;
+  }
+  .no-rewards-msg {
+    font-size: 20px;
+  }
+  .no-claimed-msg {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .link-btn {
+    font-size: 16px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .chore-name {
+    margin-left: 8px;
+  }
+
+  .tasks-container {
+    width: 100%;
+  }
+  .add-chore-flex {
+    display: block;
+    text-align: center;
+  }
+  .new-chore-btn {
+    width: 100%;
+    margin: 10px auto 14px auto;
+  }
+
+  .tasks-container {
+    margin-top: 135px;
+  }
+
+  .tasks-display {
+    margin: 20px 8px;
+  }
+
+  .new-member-btn {
+    padding: 8px 18px;
+    font-size: 10px;
+  }
+
+  .new-member-input input {
+    margin-bottom: 12px;
+  }
+  .new-member-input label {
+    margin-bottom: 5px;
+  }
+
+  .members-list-name {
+    align-items: center;
+  }
+
+  .member-name {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .admin-member-btn {
+    height: 90%;
+  }
+
+  .remove-member-btn {
+    height: 90%;
+  }
+
+  .logout-btn {
+    padding: 8px 18px;
+    font-size: 10px;
+    margin-right: 10px;
+  }
+
+  .add-chore-btn {
+    width: 100%;
+  }
+
+  .checklist {
+    width: 280px;
+    height: 310px;
+  }
+
+  .form-control {
+    width: 96%;
+    margin: 0 auto 15px;
+  }
+
+  .members-list-name {
+    width: 96%;
+  }
+
+  .member-name {
+    flex-grow: 1;
+    margin-right: 2px;
+    font-size: 16px;
+  }
+
+  .points-bank-name {
+    flex-grow: 0;
+    margin-right: 2px;
+    font-size: 20px;
+  }
+
+  .new-member-input {
+    padding: 0 8px;
+  }
+
+  .new-chore-form {
+    width: 96%;
+  }
+
+  .chore-details-container {
+    min-width: 116px;
+  }
+
+  .add-member-form .back-btn {
+    padding: 8px 18px !important;
+    font-size: 16px;
+  }
+
+  .add-member-form .submit-add-member-btn {
+    padding: 8px 18px !important;
+    font-size: 16px;
+  }
+
+  .points-member-container {
+    margin-top: 10px;
+  }
+
+  .rewards-header {
+    width: 80%;
+  }
+
+  .add-reward-btn {
+    margin-top: 20px;
+  }
+
+  .rewards-item {
+    width: 96%;
+  }
+
+  .claimed-item {
+    width: 96%;
+  }
+
+  .claimRewardModal {
+    width: 80%;
+    left: 10%;
+  }
+
+  .claimRewardFormWrapper {
+    padding: 0 10px;
+  }
+
+  .addRewardModal {
+    width: 80%;
+    left: 10%;
+  }
+
+  .addRewardFormWrapper {
+    padding: 0 10px;
+  }
+
+  .rewards-container {
+    width: 96%;
+    margin: 0 auto 50px;
+  }
+
+  .claim-reward-form-btn {
+    font-size: 16px;
+  }
+
+  .pointsbank-container {
+    width: 96%;
+    margin: 0 auto 12px;
+  }
+
+  .active {
+    font-weight: normal;
+  }
+
+  .rewards-display {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rewards-header {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+  }
+
+  .rewards-header h2 {
+    margin: 0px;
+  }
+
+  .add-reward-btn {
+    margin: 10px 10px 12px;
+    align-self: flex-end;
+  }
+}
